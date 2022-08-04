@@ -1,31 +1,12 @@
-<script lang="ts">
-export default {
-
-}
-</script>
-
 <template>
-  <div class="h-screen w-screen flex flex-col items-center justify-center">
-    <form class="flex flex-col items-center">
-      <input type="text" placeholder="Insira seu nome">
-      <input type="email" placeholder="Insira seu email">
-      <input type="password" placeholder="Insira sua senha">
-      <button
-        type="submit"
-        class="text-white border-2 h-10 w-20 rounded-md transition-colors hover:bg-white hover:text-slate-800 hover:border-none"
-      >
-        Sign up
-      </button>
-    </form>
-    <Link href="/about" class="text-blue-400">About</Link>
+  <div class="w-screen h-screen flex flex-col items-center justify-center">
+    <h1 class="text-2xl">Welcome to site</h1>
+    <Link href="/register">Sign in</Link>
   </div>
 </template>
 
 <style lang="postcss" scoped>
 * {
-  @apply bg-slate-800;
-}
-input {
-  @apply border-2 border-gray-600 bg-gray-600 m-3 rounded text-white p-3;
+  @apply bg-slate-800 text-white;
 }
 </style>

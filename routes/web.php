@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -14,12 +15,6 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', function () {
-    return Inertia::render('Home', [
-        'title' => 'Welcome to Inertia',
-    ]);
-});
-
-Route::get('/about', function () {
-    return Inertia::render('About');
-});
+Route::get('/', fn() => Inertia::render('Home'))->name('home');
+Route::get('/register', [UserController::class, 'index']);
+Route::post('/register', [UserController::class, 'store']);
