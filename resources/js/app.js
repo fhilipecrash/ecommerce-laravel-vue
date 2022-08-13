@@ -1,10 +1,13 @@
-import { createApp, h } from 'vue';
-import { createInertiaApp } from '@inertiajs/inertia-vue3';
-import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers';
-import { Link } from "@inertiajs/inertia-vue3";
-import { InertiaProgress } from '@inertiajs/progress';
+import { createApp, h } from 'vue'
+import { createInertiaApp } from '@inertiajs/inertia-vue3'
+import { resolvePageComponent } from 'laravel-vite-plugin/inertia-helpers'
+import { Link } from "@inertiajs/inertia-vue3"
+import { InertiaProgress } from '@inertiajs/progress'
+import * as Dotenv from 'dotenv'
 
-import '../css/app.css';
+import '../css/app.css'
+
+Dotenv.config()
 
 InertiaProgress.init({
   color: '#fff',

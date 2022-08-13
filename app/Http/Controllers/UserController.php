@@ -11,9 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Register', [
-            'users' => User::all(),
-        ]);
+        return Inertia::render('Register');
     }
 
     public function store(Request $request)
