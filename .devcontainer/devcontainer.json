@@ -1,0 +1,36 @@
+{
+  "name": "eCommerce Dev Container",
+  "dockerComposeFile": [
+      "../docker-compose.yml"
+  ],
+  "service": "nginx",
+  "workspaceFolder": "/var/www/html",
+  "settings": {
+      "[vue]": {
+          "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+          "editor.tabSize": 2
+      },
+      "[javascript]": {
+          "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+      }
+  },
+  "extensions": [
+      "mikestead.dotenv",
+      "dbaeumer.vscode-eslint",
+      "bmewburn.vscode-intelephense-client",
+      "onecentlin.laravel-blade",
+      "amiralizadeh9480.laravel-extra-intellisense",
+      "eamodio.gitlens",
+      "johnsoncodehk.volar",
+      "EditorConfig.EditorConfig",
+      "bradlc.vscode-tailwindcss",
+      "github.copilot",
+      "csstools.postcss",
+      "samatech.postcss-vue"
+  ],
+//   "remoteUser": "sail",
+  // "forwardPorts": [],
+  // "runServices": [],
+  // "postCreateCommand": "apt-get update && apt-get install -y curl",
+  "shutdownAction": "stopCompose"
+}
