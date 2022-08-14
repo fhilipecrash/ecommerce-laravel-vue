@@ -1,4 +1,4 @@
-FROM bitnami/php-fpm:latest
+FROM php:fpm-alpine
 
 ENV COMPOSER_MEMORY_LIMIT='-1'
 
