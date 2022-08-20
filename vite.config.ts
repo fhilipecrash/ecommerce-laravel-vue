@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import laravel from 'laravel-vite-plugin'
 import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
 import Icons from 'unplugin-icons/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 import Components from 'unplugin-vue-components/vite'
@@ -8,11 +9,10 @@ import Components from 'unplugin-vue-components/vite'
 export default defineConfig({
   plugins: [
     laravel({
-      input: [
-        'resources/js/app.js',
-      ],
+      input: 'resources/js/app.js',
       refresh: true,
     }),
+
     vue({
       template: {
         transformAssetUrls: {
@@ -21,12 +21,46 @@ export default defineConfig({
         },
       },
     }),
+
+    AutoImport({
+      dts: true,
+      include: [
+        /\.vue$/, /\.vue\?vue/, // .vue
+      ],
+      imports: [
+        'vue',
+        {
+          '@inertiajs/inertia-vue3': [
+            'useForm',
+            'Link',
+            'Head',
+          ]
+        },
+        {
+          '@inertiajs/inertia': [
+            'Inertia'
+          ]
+        }
+      ]
+    }),
+
     Components({
+      dirs: [
+        'resources/js/Components'
+      ],
+      extensions: [
+        'vue'
+      ],
+      directoryAsNamespace: true,
+      deep: true,
       resolvers: [
         IconsResolver(),
       ],
     }),
-    Icons(),
+
+    Icons({
+      autoInstall: true,
+    }),
   ],
   resolve: {
     alias: {

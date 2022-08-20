@@ -1,6 +1,4 @@
 <script lang="ts">
-import { Inertia } from '@inertiajs/inertia';
-import { reactive } from 'vue';
 
 export default {
   setup() {
