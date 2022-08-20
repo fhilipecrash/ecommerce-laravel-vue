@@ -1,0 +1,43 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: ./docker/nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ../:/var/www/html
+    networks:
+      - laravel
+    depends_on:
+      - php-fpm
+  php-fpm:
+    build:
+      context: ./docker/php-fpm
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/log/php-fpm
+      - /var/lib/php/session
+      - /var/lib/php/upload
+      - /var/lib/php/cache
+      - /var/lib/php/tmp
+    networks:
+      - sail
+  postgres:
+    build:
+      context: ./docker/postgres
+    ports:
+      - '${FORWARD_DB_PORT:-5432}:5432'
+    environment:
+      PGPASSWORD: '${DB_PASSWORD:-secret}'
+      POSTGRES_DB: '${DB_DATABASE}'
+      POSTGRES_USER: '${DB_USERNAME}'
+      POSTGRES_PASSWORD: '${DB_PASSWORD:-secret}'
+    networks:
+      - sail
+    healthcheck:
+      test: ["CMD", "pg_isready", "-q", "-d", "${DB_DATABASE}", "-U", "${DB_USERNAME}"]
+      retries: 3
+      timeout: 5s
