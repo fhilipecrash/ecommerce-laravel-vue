@@ -4,14 +4,19 @@
     "../docker-compose.yml"
   ],
   "service": "laravel.sail",
-  "workspaceFolder": "/var/www",
+  "workspaceFolder": "/var/www/html",
   "settings": {
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    },
+    "volar.completion.autoImportComponent": false,
     "[vue]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-      "editor.tabSize": 2
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+        "editor.tabSize": 2
     },
     "[javascript]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     }
   },
   "extensions": [

@@ -1,9 +1,22 @@
+<script setup lang="ts">
+const count = ref(0)
+
+function sendData() {
+  ray(count.value)
+}
+</script>
+
 <template>
   <div class="w-screen h-screen flex flex-col items-center justify-center">
     <h1 class="text-2xl">Welcome to eCommerce</h1>
     <div class="flex flex-row">
       <Link href="/login" class="link-button">Log in</Link>
       <Link href="/register" class="link-button">Sign in</Link>
+      <button @click="count++" class="link-button">Ray</button>
+      <button @click="sendData" class="link-button">Send Data</button>
+    </div>
+    <div class="text-xl">
+      <p>Count: {{ count }}</p>
     </div>
   </div>
 </template>

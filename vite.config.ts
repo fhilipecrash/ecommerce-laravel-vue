@@ -40,6 +40,11 @@ export default defineConfig({
           '@inertiajs/inertia': [
             'Inertia'
           ]
+        },
+        {
+          'node-ray/web': [
+            'ray'
+          ]
         }
       ]
     }),

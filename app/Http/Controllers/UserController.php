@@ -11,6 +11,7 @@ class UserController extends Controller
 {
     public function index()
     {
+        ray('Hello World');
         return Inertia::render('Register');
     }
 
