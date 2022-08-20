@@ -5,10 +5,13 @@ services:
       context: ./docker/nginx
     ports:
       - "80:80"
+      - "443:443"
     volumes:
-      - /var/www/html
+      - ../:/var/www
     networks:
-      - sail
+      - laravel
+    depends_on:
+      - php-fpm
   php-fpm:
     build:
       context: ./docker/php-fpm

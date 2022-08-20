@@ -1,4 +1,4 @@
-FROM php:fpm-alpine
+FROM php:8.1-fpm-alpine
 
 ENV COMPOSER_MEMORY_LIMIT='-1'
 

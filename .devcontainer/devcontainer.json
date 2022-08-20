@@ -4,7 +4,7 @@
     "../docker-compose.yml"
   ],
   "service": "laravel.sail",
-  "workspaceFolder": "/var/www/html",
+  "workspaceFolder": "/var/www",
   "settings": {
     "[vue]": {
       "editor.defaultFormatter": "dbaeumer.vscode-eslint",
