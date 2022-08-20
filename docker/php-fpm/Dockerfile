@@ -2,27 +2,27 @@ FROM php:8.1-fpm-alpine
 
 ENV COMPOSER_MEMORY_LIMIT='-1'
 
-RUN apt-get update && \
-    apt-get install -y --force-yes --no-install-recommends \
-        libmemcached-dev \
-        libzip-dev \
-        libz-dev \
-        libzip-dev \
-        libpq-dev \
-        libjpeg-dev \
-        libpng-dev \
-        libfreetype6-dev \
-        libssl-dev \
-        openssh-server \
-        libmagickwand-dev \
-        git \
-        cron \
-        nano \
-        libxml2-dev \
-        libreadline-dev \
-        libgmp-dev \
-        mariadb-client \
-        unzip
+# RUN apt-get update && \
+#     apt-get install -y --force-yes --no-install-recommends \
+#         libmemcached-dev \
+#         libzip-dev \
+#         libz-dev \
+#         libzip-dev \
+#         libpq-dev \
+#         libjpeg-dev \
+#         libpng-dev \
+#         libfreetype6-dev \
+#         libssl-dev \
+#         openssh-server \
+#         libmagickwand-dev \
+#         git \
+#         cron \
+#         nano \
+#         libxml2-dev \
+#         libreadline-dev \
+#         libgmp-dev \
+#         mariadb-client \
+#         unzip
 
 # Install soap extention
 RUN docker-php-ext-install soap
@@ -101,8 +101,8 @@ RUN . ~/.bashrc
 # Laravel Schedule Cron Job:
 #####################################
 
-RUN echo "* * * * * www-data /usr/local/bin/php /var/www/artisan schedule:run >> /dev/null 2>&1"  >> /etc/cron.d/laravel-scheduler
-RUN chmod 0644 /etc/cron.d/laravel-scheduler
+# RUN echo "* * * * * www-data /usr/local/bin/php /var/www/artisan schedule:run >> /dev/null 2>&1"  >> /etc/cron.d/laravel-scheduler
+# RUN chmod 0644 /etc/cron.d/laravel-scheduler
 
 #
 #--------------------------------------------------------------------------
