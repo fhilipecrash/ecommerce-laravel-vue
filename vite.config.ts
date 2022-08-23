@@ -25,42 +25,29 @@ export default defineConfig({
     AutoImport({
       dts: true,
       include: [
-        /\.vue$/, /\.vue\?vue/, // .vue
+        /\.vue$/,
+        /\.vue\?vue/, // .vue
       ],
       imports: [
         'vue',
         {
-          '@inertiajs/inertia-vue3': [
-            'useForm',
-            'Link',
-            'Head',
-          ]
+          '@inertiajs/inertia-vue3': ['useForm', 'Link', 'Head'],
         },
         {
-          '@inertiajs/inertia': [
-            'Inertia'
-          ]
+          '@inertiajs/inertia': ['Inertia'],
         },
         {
-          'node-ray/web': [
-            'ray'
-          ]
-        }
-      ]
+          'node-ray/web': ['ray'],
+        },
+      ],
     }),
 
     Components({
-      dirs: [
-        'resources/js/Components'
-      ],
-      extensions: [
-        'vue'
-      ],
+      dirs: ['resources/js/Components'],
+      extensions: ['vue'],
       directoryAsNamespace: true,
       deep: true,
-      resolvers: [
-        IconsResolver(),
-      ],
+      resolvers: [IconsResolver()],
     }),
 
     Icons({
@@ -73,4 +60,4 @@ export default defineConfig({
       path: 'path-browserify',
     },
   },
-});
+})
