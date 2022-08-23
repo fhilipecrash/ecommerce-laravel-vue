@@ -6,6 +6,7 @@
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
+        "@prettier/plugin-php": "^0.18.9",
         "@types/node": "^18.7.8",
         "@vitejs/plugin-vue": "^3.0.1",
         "autoprefixer": "^10.4.8",
@@ -15,6 +16,7 @@
         "lodash": "^4.17.19",
         "node-ray": "^1.18.0",
         "postcss": "^8.4.14",
+        "prettier": "^2.7.1",
         "tailwindcss": "^3.1.7",
         "typescript": "^4.7.4",
         "unplugin-auto-import": "^0.11.1",

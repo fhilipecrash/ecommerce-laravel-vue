@@ -1,0 +1,32 @@
+{
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "bracketSameLine": true,
+  "arrowParens": "always",
+  "vueIndentScriptAndStyle": true,
+  "endOfLine": "lf",
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.vue",
+        "**/*.json"
+      ],
+      "options": {
+        "tabWidth": 2,
+        "semi": false
+      }
+    },
+    {
+      "files": "**/*.php",
+      "options": {
+        "tabWidth": 4,
+        "semi": true
+      }
+    }
+  ]
+}
