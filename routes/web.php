@@ -16,5 +16,10 @@ use Inertia\Inertia;
 */
 
 Route::get('/', fn() => Inertia::render('Home'))->name('home');
+Route::get('/login', fn() => Inertia::render('Login'))->name('login');
+Route::get('/dashboard', fn() => Inertia::render('Dashboard'))->name(
+    'dashboard'
+);
 Route::get('/register', [UserController::class, 'index']);
 Route::post('/register', [UserController::class, 'store']);
+Route::post('/login', [UserController::class, 'login']);

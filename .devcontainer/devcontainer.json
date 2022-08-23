@@ -1,5 +1,5 @@
 {
-  "name": "eCommerce Dev Container",
+  "name": "eCommerce",
   "dockerComposeFile": ["../docker-compose.yml"],
   "service": "laravel.test",
   "workspaceFolder": "/var/www/html",
@@ -8,30 +8,31 @@
       "vue-html": "html",
       "vue": "html"
     },
-    "volar.completion.autoImportComponent": false
-    // "[vue]": {
-    //   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-    //   "editor.tabSize": 2
-    // },
-    // "[javascript]": {
-    //   "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    // }
+    "volar.completion.autoImportComponent": false,
+    "[vue]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+      "editor.tabSize": 2
+    },
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    }
   },
   "extensions": [
-	"mikestead.dotenv",
-	"dbaeumer.vscode-eslint",
-	"bmewburn.vscode-intelephense-client",
-	"onecentlin.laravel-blade",
-	"amiralizadeh9480.laravel-extra-intellisense",
-	"eamodio.gitlens",
-	"johnsoncodehk.volar",
-	"EditorConfig.EditorConfig",
-	"bradlc.vscode-tailwindcss",
-	"github.copilot",
-	"csstools.postcss",
-	"samatech.postcss-vue",
-	"esbenp.prettier-vscode"
-],
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "bmewburn.vscode-intelephense-client",
+    "onecentlin.laravel-blade",
+    "amiralizadeh9480.laravel-extra-intellisense",
+    "eamodio.gitlens",
+    "johnsoncodehk.volar",
+    "EditorConfig.EditorConfig",
+    "bradlc.vscode-tailwindcss",
+    "github.copilot",
+    "csstools.postcss",
+    "samatech.postcss-vue",
+    "esbenp.prettier-vscode",
+    "Vue.volar"
+  ],
   "remoteUser": "sail",
   // "forwardPorts": [],
   // "runServices": [],
