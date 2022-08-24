@@ -47,7 +47,7 @@ export default defineConfig({
       extensions: ['vue'],
       directoryAsNamespace: true,
       deep: true,
-      resolvers: [IconsResolver()],
+      resolvers: [IconsResolver({ prefix: false })],
     }),
 
     Icons({
