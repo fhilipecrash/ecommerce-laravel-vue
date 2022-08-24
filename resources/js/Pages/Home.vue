@@ -12,7 +12,8 @@
   * {
     @apply text-white;
   }
+
   .link-button {
-    @apply text-white text-center pt-1 m-2 border-2 h-10 w-20 rounded-md transition-colors hover:bg-white hover:text-slate-800 hover:border-none;
+    @apply hover:bg-white hover:text-slate-800 hover:border-none text-white text-center pt-1 m-2 border-2 h-10 w-20 rounded-md transition-colors;
   }
 </style>

@@ -11,3 +11,7 @@ max_line_length = 80
 [*.php]
 curly_bracket_next_line = true
 indent_size = 4
+
+[*.blade.php]
+curly_bracket_next_line = true
+indent_size = 2

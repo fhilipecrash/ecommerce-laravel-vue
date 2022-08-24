@@ -41,13 +41,12 @@ class UserController extends Controller
 
         try {
             $user = User::where('email', $request->email)->first();
-            ray($user);
             if (Hash::check($request->password, $user->password)) {
                 auth()->login($user);
-                ray('Laravel ' . $user->name);
-                return Inertia::render('Dashboard', [
-                    'user' => $user->name,
-                ]);
+                // return Inertia::render('Dashboard', [
+                //     'user' => $user->name,
+                // ]);
+                return Redirect::route('dashboard');
             }
         } catch (\Exception $e) {
             return Redirect::route('login')->with(
