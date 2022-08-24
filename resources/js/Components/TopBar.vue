@@ -9,7 +9,7 @@
     <div class="flex flex-row justify-end p-3">
       <button class="flex flex-row">
         <ic-baseline-account-circle class="text-2xl" />
-        <span class="text-white text-xl pl-1">Profile</span>
+        <span class="text-white text-xl px-1">Profile</span>
       </button>
     </div>
   </div>
