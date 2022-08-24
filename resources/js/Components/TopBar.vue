@@ -1,9 +1,9 @@
 <template>
   <div
     class="h-16 w-screen bg-slate-900 items-center flex flex-row p-3 shadow-xl">
-    <Link href="#" class="top-bar-button">Home</Link>
-    <Link href="#" class="top-bar-button">Products</Link>
-    <Link href="#" class="top-bar-button">Support</Link>
+    <Link href="/dashboard" class="top-bar-button">Home</Link>
+    <Link href="/dashboard/products" class="top-bar-button">Products</Link>
+    <Link href="/dashboard/support" class="top-bar-button">Support</Link>
   </div>
   <div>
     <slot />
