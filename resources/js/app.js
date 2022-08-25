@@ -7,10 +7,14 @@ import '../css/app.css'
 
 InertiaProgress.init({
   color: '#fff',
-});
+})
 
 createInertiaApp({
-  resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
+  resolve: (name) =>
+    resolvePageComponent(
+      `./Pages/${name}.vue`,
+      import.meta.glob('./Pages/**/*.vue')
+    ),
   setup({ el, App, props, plugin }) {
     createApp({ render: () => h(App, props) })
       .component('Link', Link)
@@ -18,4 +22,4 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
-});
+})

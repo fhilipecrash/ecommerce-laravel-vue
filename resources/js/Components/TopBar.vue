@@ -26,6 +26,6 @@
     @apply text-2xl;
   }
   .top-bar-button {
-    @apply text-lg m-4 font-display;
+    @apply text-lg m-4 font-display hover:text-blue-400;
   }
 </style>
