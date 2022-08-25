@@ -4,10 +4,10 @@
   "service": "laravel.test",
   "workspaceFolder": "/var/www/html",
   "settings": {
-    "emmet.includeLanguages": {
-      "vue-html": "html",
-      "vue": "html"
-    }
+    // "emmet.includeLanguages": {
+    //   "vue-html": "html",
+    //   "vue": "html"
+    // }
     // "volar.completion.autoImportComponent": false,
     // "[vue]": {
     //   "editor.defaultFormatter": "esbenp.prettier-vscode",

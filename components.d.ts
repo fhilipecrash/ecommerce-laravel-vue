@@ -7,11 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    IcbaselineAccountCircle: typeof import('~icons/ic/baseline-account-circle')['default']
     IcBaselineAccountCircle: typeof import('~icons/ic/baseline-account-circle')['default']
-    IconMdiAccount: typeof import('~icons/mdi/account')['default']
-    IconMdiAccountCircle: typeof import('~icons/mdi/account-circle')['default']
-    MdiAccountCircle: typeof import('~icons/mdi/account-circle')['default']
     TopBar: typeof import('./resources/js/Components/TopBar.vue')['default']
   }
 }
