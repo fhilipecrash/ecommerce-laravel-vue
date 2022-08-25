@@ -3,20 +3,6 @@
   "dockerComposeFile": ["../docker-compose.yml"],
   "service": "laravel.test",
   "workspaceFolder": "/var/www/html",
-  "settings": {
-    // "emmet.includeLanguages": {
-    //   "vue-html": "html",
-    //   "vue": "html"
-    // }
-    // "volar.completion.autoImportComponent": false,
-    // "[vue]": {
-    //   "editor.defaultFormatter": "esbenp.prettier-vscode",
-    //   "editor.tabSize": 2
-    // },
-    // "[javascript]": {
-    //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-    // }
-  },
   "extensions": [
     "mikestead.dotenv",
     "dbaeumer.vscode-eslint",

@@ -15,6 +15,14 @@ class UserController extends Controller
         return Inertia::render('Register');
     }
 
+    public function indexLogin()
+    {
+        ray(auth()->user());
+        return Inertia::render('Dashboard', [
+            'user' => auth()->user(),
+        ]);
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -29,7 +37,7 @@ class UserController extends Controller
             'password' => bcrypt($request->password),
         ]);
 
-        return Redirect::route('home');
+        return Redirect::route('login');
     }
 
     public function login(Request $request)
@@ -43,9 +51,6 @@ class UserController extends Controller
             $user = User::where('email', $request->email)->first();
             if (Hash::check($request->password, $user->password)) {
                 auth()->login($user);
-                // return Inertia::render('Dashboard', [
-                //     'user' => $user->name,
-                // ]);
                 return Redirect::route('dashboard');
             }
         } catch (\Exception $e) {

@@ -1,3 +1,10 @@
+<script lang="ts" setup>
+  import User from '../Models/User'
+
+  const user = inject<User>('user')
+  ray(user)
+</script>
+
 <template>
   <div
     class="h-16 w-screen justify-between items-center p-4 flex flex-row shadow-xl">
@@ -9,7 +16,7 @@
     <div class="flex flex-row justify-end p-3">
       <button class="flex flex-row">
         <ic-baseline-account-circle class="text-2xl" />
-        <span class="text-white text-xl px-1">Profile</span>
+        <span class="text-white text-xl px-1">{{ user?.name }}</span>
       </button>
     </div>
   </div>
