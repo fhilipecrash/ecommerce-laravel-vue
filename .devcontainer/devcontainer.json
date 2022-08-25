@@ -3,6 +3,9 @@
   "dockerComposeFile": ["../docker-compose.yml"],
   "service": "laravel.test",
   "workspaceFolder": "/var/www/html",
+  "settings": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "extensions": [
     "mikestead.dotenv",
     "dbaeumer.vscode-eslint",
