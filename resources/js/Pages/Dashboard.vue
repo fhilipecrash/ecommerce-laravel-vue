@@ -2,8 +2,7 @@
   import User from '../Models/User'
 
   const props = defineProps<{ user: User }>()
-
-  provide('user', props.user)
+  localStorage.setItem('user', JSON.stringify(props.user))
 </script>
 
 <template>

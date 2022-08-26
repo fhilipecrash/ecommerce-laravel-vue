@@ -1,8 +1,7 @@
 <script lang="ts" setup>
   import User from '../Models/User'
 
-  const user = inject<User>('user')
-  ray(user)
+  const user = JSON.parse(localStorage.getItem('user') as string) as User
 </script>
 
 <template>
@@ -14,10 +13,10 @@
       <Link href="/dashboard/support" class="top-bar-button">Support</Link>
     </div>
     <div class="flex flex-row justify-end p-3">
-      <button class="flex flex-row">
+      <Link href="/profile" class="flex flex-row">
         <ic-baseline-account-circle class="text-2xl" />
         <span class="text-white text-xl px-1">{{ user?.name }}</span>
-      </button>
+      </Link>
     </div>
   </div>
   <div>

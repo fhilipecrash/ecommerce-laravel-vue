@@ -20,15 +20,13 @@ Route::get('/login', fn() => Inertia::render('Login'))->name('login');
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'index']);
 Route::post('/register', [UserController::class, 'store']);
+Route::get('/profile', fn() => Inertia::render('Profile'))->name('profile');
+Route::put('/profile', [UserController::class, 'update']);
+Route::get('/profile', [UserController::class, 'profileUpdated'])->name(
+    'profile.updated'
+);
+Route::get('/products', fn() => Inertia::render('Products'))->name('products');
+Route::get('/support', fn() => Inertia::render('Support'))->name('support');
 Route::group(['prefix' => 'dashboard'], function () {
     Route::get('/', [UserController::class, 'indexLogin'])->name('dashboard');
-    Route::get('/products', fn() => Inertia::render('Products'))->name(
-        'dashboard.products'
-    );
-    Route::get('/support', fn() => Inertia::render('Support'))->name(
-        'dashboard.support'
-    );
-    Route::get('/profile', fn() => Inertia::render('Profile'))->name(
-        'dashboard.profile'
-    );
 });

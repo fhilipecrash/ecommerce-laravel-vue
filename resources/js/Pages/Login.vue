@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  const props = defineProps<{
+  defineProps<{
     errors: {
       email: string
       password: string
@@ -24,13 +24,13 @@
         type="text"
         v-model="form.email"
         placeholder="E-mail" />
-      <span> {{ props.errors.email }} </span>
+      <span> {{ errors.email }} </span>
       <input
         class="default-input"
         type="password"
         v-model="form.password"
         placeholder="Password" />
-      <span> {{ props.errors.password }} </span>
+      <span> {{ errors.password }} </span>
       <button class="default-btn">Log In</button>
     </form>
   </div>

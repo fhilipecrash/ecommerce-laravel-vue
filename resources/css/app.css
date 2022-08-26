@@ -15,3 +15,7 @@
 .default-btn {
   @apply text-white text-center pt-1 m-2 border-2 h-10 w-20 rounded-md transition-colors hover:bg-white hover:text-slate-800 hover:border-none;
 }
+
+.larger-btn {
+  @apply text-white text-center pt-1 m-2 border-2 h-12 w-36 rounded-md transition-colors hover:bg-white hover:text-slate-800 hover:border-none;
+}

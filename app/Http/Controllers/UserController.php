@@ -60,4 +60,25 @@ class UserController extends Controller
             );
         }
     }
+
+    public function update(Request $request)
+    {
+        ray(auth()->user()->id);
+        User::find(auth()->user()->id)->update([
+            'name' => $request->name,
+            'password' => bcrypt($request->password),
+        ]);
+
+        return Redirect::route('profile.updated')->with(
+            'success',
+            'Profile updated successfully'
+        );
+    }
+
+    public function profileUpdated()
+    {
+        return Inertia::render('Profile', [
+            'user' => auth()->user(),
+        ]);
+    }
 }
