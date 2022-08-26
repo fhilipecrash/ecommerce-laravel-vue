@@ -14,7 +14,6 @@
   })
 
   function updateProfile() {
-    ray(form)
     Inertia.put('/profile', form)
   }
 </script>

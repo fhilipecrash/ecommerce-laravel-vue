@@ -17,7 +17,6 @@ class UserController extends Controller
 
     public function indexLogin()
     {
-        ray(auth()->user());
         return Inertia::render('Dashboard', [
             'user' => auth()->user(),
         ]);
@@ -63,7 +62,6 @@ class UserController extends Controller
 
     public function update(Request $request)
     {
-        ray(auth()->user()->id);
         User::find(auth()->user()->id)->update([
             'name' => $request->name,
             'password' => bcrypt($request->password),
