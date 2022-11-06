@@ -8,19 +8,20 @@
   }>()
 
   const form = reactive({
-    name: null,
-    email: null,
-    password: null,
+    name: '',
+    email: '',
+    password: '',
   })
 
-  function saveUser() {
-    Inertia.post('/register', form)
+  function handleForm() {
+    ray(form)
+    Inertia.post('/api/users', form)
   }
 </script>
 
 <template>
   <div class="h-screen w-screen flex flex-col items-center justify-center">
-    <form class="flex flex-col items-center" @submit.prevent="saveUser()">
+    <form class="flex flex-col items-center" @submit.prevent="handleForm()">
       <input
         class="default-input"
         type="text"

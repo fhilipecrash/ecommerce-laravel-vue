@@ -10,11 +10,6 @@ use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
-    public function index()
-    {
-        return Inertia::render('Register');
-    }
-
     public function indexLogin()
     {
         return Inertia::render('Dashboard', [
