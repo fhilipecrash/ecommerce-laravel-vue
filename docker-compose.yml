@@ -6,7 +6,7 @@ services:
       context: ./docker/sail
       dockerfile: Dockerfile
       args:
-        WWWGROUP: '${WWWGROUP}'
+        WWWGROUP: '${WWWGROUP:-1000}'
     image: sail-8.1/app
     extra_hosts:
       - 'host.docker.internal:host-gateway'
@@ -47,7 +47,7 @@ services:
           '-d',
           '${DB_DATABASE}',
           '-U',
-          '${DB_USERNAME}',
+          '${DB_USERNAME}'
         ]
       retries: 3
       timeout: 5s
@@ -55,7 +55,7 @@ services:
     image: butschster/buggregator:latest
     networks:
       - sail
-    ports: ['23517:8000', '1025:1025', '9912:9912', '9913:9913']
+    ports: [ '23517:8000', '1025:1025', '9912:9912', '9913:9913' ]
 networks:
   sail:
     driver: bridge
