@@ -10,16 +10,26 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "skipLibCheck": true,
-    "types": ["vitest/globals"]
+    "types": [
+      "vite/client"
+    ]
   },
   "include": [
     "resources/js/**/*.ts",
     "resources/js/**/*.d.ts",
     "resources/js/**/*.tsx",
     "resources/js/**/*.vue",
-    "auto-imports.d.ts"
+    "auto-imports.d.ts",
+    "resources/js/app.ts"
   ],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }

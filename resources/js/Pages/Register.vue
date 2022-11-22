@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+  import { Inertia } from '@inertiajs/inertia'
+  import { ray } from 'node-ray'
+
   defineProps<{
     errors: {
       name: string
@@ -12,7 +15,6 @@
     email: '',
     password: '',
   })
-
   function handleForm() {
     ray(form)
     Inertia.post('/api/users', form)

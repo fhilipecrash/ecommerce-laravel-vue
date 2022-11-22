@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+  import { Inertia } from '@inertiajs/inertia'
+  import { reactive } from 'vue'
+
   defineProps<{
     errors: {
       email: string

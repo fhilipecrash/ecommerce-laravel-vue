@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-  import User from '../Models/User'
+  import { User } from '../Models/User'
+  import TopBar from '../Components/TopBar.vue'
 
   const props = defineProps<{ user: User }>()
   localStorage.setItem('user', JSON.stringify(props.user))

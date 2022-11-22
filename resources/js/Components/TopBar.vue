@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-  import User from '../Models/User'
+  import { User } from '../Models/User'
+  import { Link } from '@inertiajs/inertia-vue3'
 
   const user = JSON.parse(localStorage.getItem('user') as string) as User
 </script>

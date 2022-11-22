@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-  import User from '../Models/User'
+  import { User } from '../Models/User'
+  import TopBar from '../Components/TopBar.vue'
+  import { Inertia } from '@inertiajs/inertia'
 
   const props = defineProps<{ user: User }>()
   if (props.user) {
