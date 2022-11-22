@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { Inertia } from '@inertiajs/inertia'
-  import { reactive } from 'vue'
+  import { reactive, defineProps } from 'vue'
 
   defineProps<{
     errors: {
