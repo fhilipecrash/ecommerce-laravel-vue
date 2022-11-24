@@ -1,24 +1,3 @@
-<script lang="ts" setup>
-  import { Inertia } from '@inertiajs/inertia'
-  import { reactive, defineProps } from 'vue'
-
-  defineProps<{
-    errors: {
-      email: string
-      password: string
-    }
-  }>()
-
-  const form = reactive({
-    email: null,
-    password: null,
-  })
-
-  function handleForm() {
-    Inertia.post('/login', form)
-  }
-</script>
-
 <template>
   <div class="w-screen h-screen flex flex-col items-center justify-center">
     <form class="flex flex-col items-center" @submit.prevent="handleForm()">
@@ -38,3 +17,24 @@
     </form>
   </div>
 </template>
+
+<script setup lang="ts">
+  import { Inertia } from '@inertiajs/inertia'
+  import { reactive, defineProps } from 'vue'
+
+  defineProps<{
+    errors: {
+      email: string
+      password: string
+    }
+  }>()
+
+  const form = reactive({
+    email: null,
+    password: null,
+  })
+
+  function handleForm() {
+    Inertia.post('/login', form)
+  }
+</script>

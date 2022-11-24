@@ -1,26 +1,3 @@
-<script lang="ts" setup>
-  import { Inertia } from '@inertiajs/inertia'
-  import { ray } from 'node-ray'
-
-  defineProps<{
-    errors: {
-      name: string
-      email: string
-      password: string
-    }
-  }>()
-
-  const form = reactive({
-    name: '',
-    email: '',
-    password: '',
-  })
-  function handleForm() {
-    ray(form)
-    Inertia.post('/api/users', form)
-  }
-</script>
-
 <template>
   <div class="h-screen w-screen flex flex-col items-center justify-center">
     <form class="flex flex-col items-center" @submit.prevent="handleForm()">
@@ -47,7 +24,31 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<script setup lang="ts">
+  import { Inertia } from '@inertiajs/inertia'
+  import { reactive, defineProps } from 'vue'
+  import { ray } from 'node-ray'
+
+  defineProps<{
+    errors: {
+      name: string
+      email: string
+      password: string
+    }
+  }>()
+
+  const form = reactive({
+    name: '',
+    email: '',
+    password: '',
+  })
+  function handleForm() {
+    ray(form)
+    Inertia.post('/api/users', form)
+  }
+</script>
+
+<style scoped lang="postcss">
   span {
     @apply text-red-600;
   }

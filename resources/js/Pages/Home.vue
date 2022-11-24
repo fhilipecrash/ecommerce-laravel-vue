@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-  import { Link } from '@inertiajs/inertia-vue3'
-</script>
-
 <template>
   <div class="w-screen h-screen flex flex-col items-center justify-center">
     <h1 class="text-2xl">Welcome to eCommerce</h1>
@@ -12,7 +8,11 @@
   </div>
 </template>
 
-<style lang="postcss" scoped>
+<script setup lang="ts">
+  import { Link } from '@inertiajs/inertia-vue3'
+</script>
+
+<style scoped lang="postcss">
   * {
     @apply text-white;
   }

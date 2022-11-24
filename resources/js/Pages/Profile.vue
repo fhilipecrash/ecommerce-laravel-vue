@@ -1,25 +1,3 @@
-<script lang="ts" setup>
-  import { User } from '../Models/User'
-  import TopBar from '../Components/TopBar.vue'
-  import { Inertia } from '@inertiajs/inertia'
-
-  const props = defineProps<{ user: User }>()
-  if (props.user) {
-    localStorage.setItem('user', JSON.stringify(props.user))
-  }
-
-  const user = JSON.parse(localStorage.getItem('user') as string) as User
-
-  const form = reactive({
-    name: null,
-    password: null,
-  })
-
-  function updateProfile() {
-    Inertia.put('/profile', form)
-  }
-</script>
-
 <template>
   <TopBar>
     <form
@@ -50,3 +28,26 @@
     </form>
   </TopBar>
 </template>
+
+<script setup lang="ts">
+  import { reactive, defineProps } from 'vue'
+  import { User } from '../Models/User'
+  import TopBar from '../Components/TopBar.vue'
+  import { Inertia } from '@inertiajs/inertia'
+
+  const props = defineProps<{ user: User }>()
+  if (props.user) {
+    localStorage.setItem('user', JSON.stringify(props.user))
+  }
+
+  const user = JSON.parse(localStorage.getItem('user') as string) as User
+
+  const form = reactive({
+    name: null,
+    password: null,
+  })
+
+  function updateProfile() {
+    Inertia.put('/profile', form)
+  }
+</script>

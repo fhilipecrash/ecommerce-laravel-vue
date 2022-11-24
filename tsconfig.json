@@ -24,7 +24,6 @@
     "resources/js/**/*.d.ts",
     "resources/js/**/*.tsx",
     "resources/js/**/*.vue",
-    "auto-imports.d.ts",
     "resources/js/app.ts"
   ],
   "references": [
