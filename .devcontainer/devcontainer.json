@@ -1,6 +1,8 @@
 {
   "name": "eCommerce",
-  "dockerComposeFile": ["../docker-compose.yml"],
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
   "service": "laravel.test",
   "workspaceFolder": "/var/www/html",
   "settings": {
@@ -25,6 +27,6 @@
   "remoteUser": "sail",
   // "forwardPorts": [],
   // "runServices": [],
-  // "postCreateCommand": "apt-get update && apt-get install -y curl",
+  "postCreateCommand": "chown -R 1000:1000 /var/www/html",
   "shutdownAction": "stopCompose"
 }
