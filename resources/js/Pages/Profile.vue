@@ -30,7 +30,7 @@
 </template>
 
 <script setup lang="ts">
-  import { reactive, defineProps } from 'vue'
+  import { reactive } from 'vue'
   import { User } from '../Models/User'
   import TopBar from '../Components/TopBar.vue'
   import { Inertia } from '@inertiajs/inertia'
@@ -48,6 +48,6 @@
   })
 
   function updateProfile() {
-    Inertia.put('/profile', form)
+    Inertia.put('/api/profile', form)
   }
 </script>

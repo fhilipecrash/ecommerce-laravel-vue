@@ -26,8 +26,7 @@
 
 <script setup lang="ts">
   import { Inertia } from '@inertiajs/inertia'
-  import { reactive, defineProps } from 'vue'
-  import { ray } from 'node-ray'
+  import { reactive } from 'vue'
 
   defineProps<{
     errors: {
@@ -43,7 +42,6 @@
     password: '',
   })
   function handleForm() {
-    ray(form)
     Inertia.post('/api/users', form)
   }
 </script>
