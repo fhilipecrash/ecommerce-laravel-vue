@@ -7,7 +7,6 @@
 </template>
 
 <script setup lang="ts">
-  import { defineProps } from 'vue'
   import { User } from '../Models/User'
   import TopBar from '../Components/TopBar.vue'
 

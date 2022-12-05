@@ -3,7 +3,7 @@
     <form class="flex flex-col items-center" @submit.prevent="handleForm()">
       <input
         class="default-input"
-        type="text"
+        type="email"
         v-model="form.email"
         placeholder="E-mail" />
       <span> {{ errors.email }} </span>
@@ -20,7 +20,7 @@
 
 <script setup lang="ts">
   import { Inertia } from '@inertiajs/inertia'
-  import { reactive, defineProps } from 'vue'
+  import { reactive } from 'vue'
 
   defineProps<{
     errors: {
@@ -35,6 +35,6 @@
   })
 
   function handleForm() {
-    Inertia.post('/login', form)
+    Inertia.post('/api/auth', form)
   }
 </script>
