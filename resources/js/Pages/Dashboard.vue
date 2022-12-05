@@ -20,7 +20,13 @@
           placeholder="Quantity"
           v-model="form.quantity" />
 
-        <button class="default-btn">Add</button>
+        <input
+          type="text"
+          class="default-input"
+          placeholder="Description"
+          v-model="form.description" />
+
+        <button type="submit" class="default-btn">Add</button>
       </form>
     </div>
   </TopBar>
@@ -30,17 +36,19 @@
   import { User } from '../Models/User'
   import TopBar from '../Components/TopBar.vue'
   import { reactive } from 'vue'
+  import { Inertia } from '@inertiajs/inertia'
 
   const form = reactive({
     name: '',
     price: 0.0,
     quantity: 0,
+    description: '',
   })
 
   const props = defineProps<{ user: User }>()
   localStorage.setItem('user', JSON.stringify(props.user))
 
   function handleForm() {
-    console.log(form)
+    Inertia.post('/api/products', form)
   }
 </script>

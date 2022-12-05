@@ -24,6 +24,6 @@ class ProductController extends Controller
             'description' => $request->description,
         ]);
 
-        return Redirect::route('products');
+        return Redirect::route('dashboard');
     }
 }
