@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Product;
+use Inertia\Inertia;
 
 class ProductController extends Controller
 {
@@ -25,5 +26,12 @@ class ProductController extends Controller
         ]);
 
         return Redirect::route('dashboard');
+    }
+
+    public function index()
+    {
+        $products = Product::all();
+
+        return Inertia::render('Dashboard', ['products' => $products]);
     }
 }
