@@ -3,7 +3,6 @@
     <form
       @submit.prevent="updateProfile()"
       class="flex flex-col items-center justify-center h-full w-screen p-6">
-      <ic-baseline-account-circle class="text-9xl" />
       <div class="flex flex-col text-center">
         <label for="username">Username</label>
         <input

@@ -24,7 +24,7 @@
 
   defineProps<{
     errors: {
-      email: string
+      email: string,
       password: string
     }
   }>()

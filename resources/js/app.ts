@@ -10,8 +10,8 @@ InertiaProgress.init({
 })
 
 createInertiaApp({
-  resolve: (name) =>
-    resolvePageComponent(
+  resolve: async (name) =>
+    await resolvePageComponent(
       `./Pages/${name}.vue`,
       import.meta.glob('./Pages/**/*.vue') as Record<string, () => Promise<any>>
     ),
@@ -22,4 +22,4 @@ createInertiaApp({
       .use(plugin)
       .mount(el)
   },
-})
+}).catch((error) => console.error(error))
